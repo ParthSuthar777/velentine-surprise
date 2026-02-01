@@ -11,6 +11,7 @@ const splashScreen = document.getElementById('splash-screen');
 let musicPlaying = false;
 let letterTyped = false;
 
+
 // --- Music Logic ---
 function startExperience() {
   if (splashScreen) splashScreen.classList.add('hidden');
