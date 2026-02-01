@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story - Will You Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;700&family=Dancing+Script:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Splash Screen for Autoplay -->
+    <div id="splash-screen">
+        <div class="glass-card">
+            <h1 class="glow-text">Ready for a surprise?</h1>
+            <p>I've created a journey of our love... click below to enter.</p>
+            <button id="start-btn" onclick="startExperience()">Start Our Journey ❤️</button>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="heart-container"></div>
+    <div id="sparkle-container"></div>
+
+    <!-- Music Toggle -->
+    <div id="music-control" class="music-off" onclick="toggleMusic()">
+        <span id="music-icon">🎵</span>
+    </div>
+
+    <!-- Section 1: Intro -->
+    <section class="screen active" id="intro-section">
+        <div class="glass-card">
+            <img src="hero.png" alt="Love illustration" class="hero-img">
+            <h1 class="glow-text">Welcome, My Love</h1>
+            <p>I've created something special just for you. Scroll down to begin our journey...</p>
+            <div class="scroll-indicator">↓</div>
+        </div>
+    </section>
+
+    <!-- Section 2: The Letter -->
+    <section class="screen" id="letter-section">
+        <div class="letter-paper">
+            <h2 class="handwritten-title">My Dearest...</h2>
+            <div id="typewriter-text" class="handwritten-body"></div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Journey Timeline -->
+    <section class="screen" id="timeline-section">
+        <div class="timeline-container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left reveal">
+                    <div class="timeline-content">
+                        <h3>How We Met</h3>
+                        <p>That moment when everything changed... remember?</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal">
+                    <div class="timeline-content">
+                        <h3>First Smile</h3>
+                        <p>The first time your smile lit up my whole world.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left reveal">
+                    <div class="timeline-content">
+                        <h3>First Memory</h3>
+                        <p>A precious day I'll keep in my heart forever.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal">
+                    <div class="timeline-content">
+                        <h3>Today</h3>
+                        <p>Every second with you is a gift.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Quiz -->
+    <section class="screen" id="quiz-section">
+        <div class="glass-card">
+            <h2 class="section-title">A Little Fun...</h2>
+            <p>How well do you know us?</p>
+            <div id="quiz-container">
+                <div id="question-text" class="question-style"></div>
+                <div id="options-container" class="options-style"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Proposal -->
+    <section class="screen" id="proposal-section">
+        <div class="glass-card" id="main-card">
+            <div id="ask-screen">
+                <h1 class="heart-beat">Finally, My Love...</h1>
+                <p>You are the best thing that ever happened to me. ❤️</p>
+                <div class="buttons">
+                    <button id="yes-btn">Will You Be My Valentine?</button>
+                </div>
+            </div>
+            <div id="success-screen" class="success-screen">
+                <h1>Yay! Forever Yours! ❤️</h1>
+                <p>You've made me the happiest person in the world! ✨🌹</p>
+                <div id="final-video-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="message-overlay" class="hidden">
+        <div class="overlay-content">
+            <span id="close-overlay" onclick="closeOverlay()">×</span>
+            <p id="overlay-text"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
